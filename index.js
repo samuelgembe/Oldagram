@@ -28,3 +28,45 @@ const posts = [
     }
 ]
 
+const feedEl = document.getElementById("feed")
+let postHTML = ""
+
+
+for (let i = 0; i < posts.length; i++) {
+    let currentPost = posts[i]
+    postHTML += `
+    <article class="post">
+                    <header class="post__header container">
+                        <img class="avatar" src="${currentPost.avatar}" alt="user avatar">
+                        <div class="post__autor-info">
+                            <p class="username">${currentPost.username}</p>
+                            <p class="user-location">${currentPost.location}</p>
+                        </div>
+                    </header>
+                    
+                    <div class="post-img">
+                        <img src="${currentPost.post}" alt="Van Gogh painting">
+                    </div>
+                    
+                    <div class="post-interactions container">
+                        <div class="post-icons">
+                            <div class="like-icon icon">
+                                <img src="images/icon-heart.png" alt="like icon">
+                            </div>
+                            <div class="comment-icon icon">
+                                <img src="images/icon-comment.png" alt="comment icon">
+                            </div>
+                            <div class="dm-icon icon">
+                                <img src="images/icon-dm.png" alt="dm icon">
+                            </div>
+                        </div>
+
+                        <p class="like-counter">${currentPost.likes} likes</p>
+                        <p class="post-title"><span class="username">${currentPost.username}</span> ${currentPost.comment}</p>
+                    </div>  
+
+                </article>
+    `                   
+}
+
+feedEl.innerHTML = postHTML   

@@ -6,18 +6,44 @@
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <div class="img-wrapper top-logo">
-                <img src="images/logo.png" alt="logo">
-            </div>
-            <div class="img-wrapper avatar-top">
-                <img src="images/user-avatar.png" alt="user avatar">
-            </div>
+        <header class="navbar">
+            <img class="navbar__logo" src="images/logo.png" alt="logo">
+            <img class="avatar" src="images/user-avatar.png" alt="user profile picture">
         </header>
 
         <main>
-            <section class="posts-container" id="posts-container">
-                
+            <section class="feed" id="feed">
+                <article class="post">
+                    <header class="post__header container">
+                        <img class="avatar" src="images/avatar-vangogh.jpg" alt="user avatar">
+                        <div class="post__autor-info">
+                            <p class="username">Vincent van Gogh</p>
+                            <p class="user-location">Zudert, Netherlands</p>
+                        </div>
+                    </header>
+                    
+                    <div class="post-img">
+                        <img src="images/post-vangogh.jpg" alt="Van Gogh painting">
+                    </div>
+                    
+                    <div class="post-interactions container">
+                        <div class="post-icons">
+                            <div class="like-icon icon">
+                                <img src="images/icon-heart.png" alt="like icon">
+                            </div>
+                            <div class="comment-icon icon">
+                                <img src="images/icon-comment.png" alt="comment icon">
+                            </div>
+                            <div class="dm-icon icon">
+                                <img src="images/icon-dm.png" alt="dm icon">
+                            </div>
+                        </div>
+
+                        <p class="like-counter">21,987 likes</p>
+                        <p class="post-title"><span class="username">vincey1853</span> just took a few mushrooms lol</p>
+                    </div>  
+
+                </article>
             </section>
         </main>
 
